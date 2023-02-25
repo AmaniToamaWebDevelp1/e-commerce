@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <!--Scripts-->
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <!--styles-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+</head>
+<body>
+   
+    <header class=" masthead" style="background-image: url('bg.jpg') ;">
+        <nav class="navbar navbar-expand-lg   ">
+            <div class="container">
+                <a class="navbar-brand text-white-50   active shadow-lg   ">Amani Toama</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-5 myFont ">
+                    <h1 class="text-center text-white active  my-5">E-commerce project</h1>
+                    <div class="text-center text-white-50 shadow glace-effect my-4 p-3 fw-bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic similique eveniet dolores nulla pariatur fugit, corporis maiores officia necessitatibus, eius ad. Eos nam quam ducimus accusamus, quibusdam ad maiores architecto.</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 my-5">
+                <div class="text-center text-black-50">
+                    <h1>Hello their :)</h1>
+                    <p class="text-sm-center"> I am Amani Toama, Front-End developer, I hope for you a nice experience in my virtual store !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" ng-controller="itemsList">
+        <div class="row justify-content-center  my-5 ">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                       
+                              <div class="d-flex col-md-6"> <button class="btn  "><img src="search.svg" alt=""></button>
+                                
+                                <input class=" form-control  my-5" type="search" name="search-bar" ng-model="search" placeholder="Search.."></div>
+                               
+                           
+                     
+                        
+                    </div>
+                  </div>
+                    <!---shoes-->
+                    <div class="col-md-4 mx-3  row" ng-repeat=" item in shoes | filter: search"> 
+                
+                    <div class="card  my-2 shadow justify-content-center" >
+                    <div class="card-body justify-content-center">
+                    <div class="card-title text-center text-capitalize">{{item.title}}</div>
+                    <div class="card-img justify-content-center"><img class="card-img"   ng-src="{{item.url}}.jpeg" alt="{{item.title}}"> </div>
+                    <div class="card-footer">{{item.price}}</div>
+                      </div>
+                    </div>
+      
+              </div>
+                     <!--bags-->
+                    <div class="col-md-4 mx-3  row" ng-repeat=" item in bags | filter: search"> 
+                
+                    <div class="card  my-2 shadow justify-content-center" >
+                    <div class="card-body justify-content-center">
+                    <div class="card-title text-center text-capitalize">{{item.title}}</div>
+                    <div class="card-img justify-content-center"><img class="card-img"   ng-src="{{item.url}}.jpeg" alt="{{item.title}}"> </div>
+                    <div class="card-footer">{{item.price}}</div>
+                      </div>
+                    </div>
+      
+              </div>
+                      <!--accessories-->
+                    <div class="col-md-4 mx-3  row" ng-repeat=" item in accessories | filter: search"> 
+                
+                    <div class="card  my-2 shadow justify-content-center" >
+                    <div class="card-body justify-content-center">
+                    <div class="card-title text-center text-capitalize">{{item.title}}</div>
+                    <div class="card-img justify-content-center"><img class="card-img"   ng-src="{{item.url}}.jpeg" alt="{{item.title}}"> </div>
+                    <div class="card-footer">{{item.price}}</div>
+                      </div>
+                    </div>
+      
+              </div>
+                      <!--pantaloons-->
+                    <div class="col-md-4 mx-3  row" ng-repeat=" item in pantaloons | filter: search "> 
+                
+                    <div class="card  my-2 shadow justify-content-center" >
+                    <div class="card-body justify-content-center">
+                    <div class="card-title text-center text-capitalize">{{item.title}}</div>
+                    <div class="card-img justify-content-center"><img class="card-img"   ng-src="{{item.url}}.jpeg" alt="{{item.title}}"> </div>
+                    <div class="card-footer">{{item.price}}</div>
+                      </div>
+                    </div>
+      
+              </div>
+              
+         
+        </div>
+    </div>
+    
+    
+</body>
+<footer class="masthead bg-dark   ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3"> 
+               <ul class="list-unstyled  ">
+                  <li class="item-intro text-white active">Contact US</li>
+                  <li class="item-intro text-white-50"><a class="nav-link" href="mailto:amanitoama@gaimal.com">Email</a></li>
+                  <li class="item-intro text-white-50"><a class="nav-link" href="https://wa.me/+96179315283">WhatsApp</a></li>
+               </ul>
+            </div>
+          
+            <div class="col-md-3"> 
+               <ul class="list-unstyled  ">
+                  <li class="item-intro text-white active">About us</li>
+                  <li class="item-intro text-white-50"><a class="nav-link" href="#">Info</a></li>
+                  <li class="item-intro text-white-50"><a class="nav-link" href="#">privacy</a></li>
+               </ul>
+            </div>
+         </div>
+    </div>
+  <div class="nav-brand"><h3 class="text-secondary">BY AMANI TOAMA &hearts;</h3></div>
+</footer>
+</html>
